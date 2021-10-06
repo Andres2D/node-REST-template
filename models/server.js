@@ -19,6 +19,9 @@ class Server {
         // CORS 
         this.app.use(cors());
 
+        // Parse and Read of the body
+        this.app.use(express.json());
+
         // Public directory
         this.app.use(express.static('public'));
     }
